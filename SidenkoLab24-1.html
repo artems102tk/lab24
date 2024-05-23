@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Класова компонента
+        class HobbyClassComponent extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <h1>Моє Хоббі</h1>
+                        <p>Я люблю читати книги та подорожувати.</p>
+                    </div>
+                );
+            }
+        }
+
+        // Функціональна компонента
+        function HobbyFunctionalComponent() {
+            return (
+                <div>
+                    <h1>Моє Хоббі</h1>
+                    <p>Я захоплююсь фотографією та спортом.</p>
+                </div>
+            );
+        }
+
+        // Рендеринг компонент (можна замінити записавши потрібну функцію)
+        ReactDOM.render(<HobbyClassComponent />, document.getElementById('root'));
+        // ReactDOM.render(<HobbyFunctionalComponent />, document.getElementById('root'));
+    </script>
+</body>
+</html>
